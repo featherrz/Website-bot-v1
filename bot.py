@@ -14,14 +14,23 @@ bot = commands.Bot(command_prefix=".", intents=intents)
 @bot.event
 async def on_ready():
   print("Bot Active & Running")
-  continue
+  check = os.system("pip show requests >/dev/null")
+  if check == 0:
+    pass
+  else:
+    subprocess.run(["pip install requests"])
+  
 
 @bot.command()
 async def fetch(ctx, url):
   try:
     if https:// or http:// in url:
       res = requests.get(url)
-      
+      data = res.text()
+      em = discord.Embed(
+        title="Website Fetched √
+      ctx.send(embed=em)
+      ctx.send
     else:
       
     
