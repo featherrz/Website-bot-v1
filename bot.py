@@ -25,12 +25,15 @@ async def on_ready():
 async def fetch(ctx, url):
   try:
     if https:// or http:// in url:
-      res = requests.get(url)
-      data = res.text()
-      em = discord.Embed(
-        title="Website Fetched √
-      ctx.send(embed=em)
-      ctx.send
+      if "." not in url:
+        ctx.send("Error: Invaild Domain ({url}) ✗")
+      else:
+        res = requests.get(url)
+        data = res.text()
+        em = discord.Embed(
+          title="Website Fetched √
+        ctx.send(embed=em)
+        ctx.send
     else:
       
     
