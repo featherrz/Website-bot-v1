@@ -3,7 +3,8 @@ import subprocess
 import asyncio
 import sqlite3
 import discord
-import aiohttp
+import requests
+import shutil
 from discord import command.ext
 
 intents = discord.Intents.default()
@@ -19,4 +20,9 @@ async def on_ready():
 async def fetch(ctx, url):
   try:
     if https:// or http:// in url:
+      res = requests.get(url)
+    
+    else:
+      
+    
       
