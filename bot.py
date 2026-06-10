@@ -21,7 +21,7 @@ async def fetch(ctx, url):
   try:
     if https:// or http:// in url:
       res = requests.get(url)
-    
+      
     else:
       
     
